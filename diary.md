@@ -453,3 +453,44 @@ Initially, I encountered unnecessary re-renders because I updated state inside a
 ### 🎯 Next Steps
 
 Tomorrow I'll explore form handling in greater depth, including controlled inputs, client-side validation, and building robust forms using **React Hook Form** together with **Zod**.
+
+---
+
+
+## 📅 Day 12 – Jul 14
+
+**🏷️ Training Day:** Day 12 of 28
+**📚 Topic:** Forms in Depth – Controlled Inputs, Validation, and Integrating React Hook Form + Zod
+
+---
+
+### 🎯 Objective
+
+Learn how to build scalable and type-safe forms in Next.js using React Hook Form for state management and Zod for schema-based validation.
+
+### 📌 Topics Covered
+
+- Managing controlled form inputs in React.
+- Form state management using `react-hook-form`.
+- Defining validation schemas with Zod.
+- Integrating Zod with React Hook Form using `zodResolver`.
+- Displaying validation errors and handling successful form submissions.
+
+### 💻 Hands-on / Practice
+
+I built a user registration form with fields for name, email, password, and confirm password. The form was managed using React Hook Form, while Zod handled schema validation, including password confirmation and email format checks. I displayed field-level validation messages and prevented submission until all validation rules passed.
+
+### 📖 Key Learnings
+
+- I found React Hook Form much more efficient than managing every input with individual `useState` hooks, especially as the form became larger.
+- Using Zod allowed me to centralize validation rules in a single schema, making them easier to maintain and reuse.
+- The integration between React Hook Form and Zod provided a clean, type-safe workflow with minimal boilerplate.
+- Keeping validation logic separate from UI components made the form implementation more readable and easier to extend.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, my validation errors were not appearing because I forgot to connect the Zod schema through `zodResolver`. After configuring the resolver correctly, the validation worked as expected. I also encountered an issue with confirm password validation, which I resolved by refining the Zod schema to compare both password fields before submission.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore styling approaches in Next.js, comparing CSS Modules with Tailwind CSS and learning how to organize reusable, maintainable component styles.
