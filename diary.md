@@ -50,6 +50,7 @@ Tomorrow I'll explore the App Router in more detail, focusing on layouts, nested
 
 ---
 
+
 ### 🎯 Objective
 
 Explore how the App Router organizes an application using the file system, understand the roles of `page.tsx` and `layout.tsx`, and learn how nested routes are structured in Next.js.
@@ -82,6 +83,7 @@ At first, I placed a page in an incorrect folder, which resulted in an unexpecte
 Tomorrow I'll explore navigation in the App Router, including the `Link` component, programmatic navigation with `useRouter`, tracking the current route using `usePathname`, and creating dynamic routes with `[id]`.
 
 ---
+
 
 ## 📅 Day 3 – Jul 3
 
@@ -122,6 +124,7 @@ Initially, I attempted to use `useRouter` inside a Server Component, which resul
 Tomorrow I'll explore React Server Components and Client Components, focusing on the `"use client"` boundary, rendering behavior, and choosing the appropriate component type for different scenarios.
 
 ---
+
 
 ## 📅 Day 4 – Jul 4
 
@@ -173,6 +176,7 @@ Tomorrow I'll explore data fetching in Server Components, including asynchronous
 
 ---
 
+
 ### 🎯 Objective
 
 Learn how data fetching works in the Next.js App Router by using asynchronous Server Components, the built-in `fetch` API, and route-level loading states to improve the user experience.
@@ -205,6 +209,7 @@ Initially, I expected `fetch` to behave exactly like it does in a browser enviro
 Tomorrow I'll explore Next.js rendering strategies, comparing Server-Side Rendering (SSR), Static Site Generation (SSG), and Incremental Static Regeneration (ISR), and understand when each approach is the most appropriate.
 
 ---
+
 
 ## 📅 Day 6 – Jul 7
 
@@ -246,6 +251,7 @@ Tomorrow I'll explore static route generation with `generateStaticParams` and le
 
 ---
 
+
 ## 📅 Day 7 – Jul 8
 
 **🏷️ Training Day:** Day 7 of 28
@@ -285,6 +291,7 @@ Initially, I expected every dynamic route to be generated automatically, but I r
 Tomorrow I'll explore Route Handlers in Next.js by building REST API endpoints using the `app/api` directory and handling different HTTP methods within the App Router.
 
 ---
+
 
 ## 📅 Day 8 – Jul 9
 
@@ -326,6 +333,7 @@ Tomorrow I'll connect Route Handlers to a database, learning how to access backe
 
 ---
 
+
 ## 📅 Day 9 – Jul 10
 
 **🏷️ Training Day:** Day 9 of 28
@@ -366,6 +374,7 @@ Tomorrow I'll explore Server Actions, learning how to perform data mutations and
 
 ---
 
+
 ## 📅 Day 10 – Jul 11
 
 **🏷️ Training Day:** Day 10 of 28
@@ -403,3 +412,44 @@ Initially, I forgot to mark the action with the `"use server"` directive, causin
 ### 🎯 Next Steps
 
 Tomorrow I'll explore client-side state management in React, focusing on `useState`, `useEffect`, lifting state between components, and composing reusable component hierarchies.
+
+---
+
+
+## 📅 Day 11 – Jul 13
+
+**🏷️ Training Day:** Day 11 of 28
+**📚 Topic:** Client-side State – `useState`, `useEffect`, Lifting State, and Component Composition
+
+---
+
+### 🎯 Objective
+
+Understand how client-side state is managed in React within a Next.js application and learn how to structure components so that state is shared efficiently and UI remains maintainable.
+
+### 📌 Topics Covered
+
+- Managing local component state using `useState`.
+- Using `useEffect` for client-side side effects and synchronization.
+- Lifting state to a common parent component for shared data.
+- Building reusable UI through component composition.
+- Identifying when state should remain local versus being shared across components.
+
+### 💻 Hands-on / Practice
+
+I built a small task management interface consisting of a task input, task list, and task counter. The parent component managed the shared state, while child components received data and callbacks through props. I also used `useEffect` to persist tasks to `localStorage` and restore them when the page was refreshed.
+
+### 📖 Key Learnings
+
+- I reinforced the idea that state should live in the closest common ancestor when multiple components need access to the same data.
+- I found component composition to be a cleaner approach than creating large, monolithic components with mixed responsibilities.
+- I better understood that `useEffect` is intended for synchronizing with external systems, such as browser storage, rather than for deriving state.
+- Separating state management from presentation made the application easier to reason about and simplified future enhancements.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, I encountered unnecessary re-renders because I updated state inside an effect with an incorrect dependency array. Reviewing the dependency list and keeping only the required values resolved the issue. I also briefly duplicated state across components before lifting it to the parent, which eliminated synchronization problems.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore form handling in greater depth, including controlled inputs, client-side validation, and building robust forms using **React Hook Form** together with **Zod**.
