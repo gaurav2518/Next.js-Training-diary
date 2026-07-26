@@ -323,3 +323,43 @@ Initially, I attempted to create API files using the older `pages/api` conventio
 ### 🎯 Next Steps
 
 Tomorrow I'll connect Route Handlers to a database, learning how to access backend data sources, perform database operations, and expose the results through Next.js API endpoints.
+
+---
+
+## 📅 Day 9 – Jul 10
+
+**🏷️ Training Day:** Day 9 of 28
+**📚 Topic:** Connecting Next.js to a Backend/Database – Calling a Database from Route Handlers
+
+---
+
+### 🎯 Objective
+
+Understand how Route Handlers interact with a database and learn how to expose persistent data through Next.js API endpoints using a clean server-side architecture.
+
+### 📌 Topics Covered
+
+- Establishing database connections from Route Handlers.
+- Performing CRUD operations within API endpoints.
+- Structuring database access separately from route logic.
+- Handling asynchronous database queries and error responses.
+- Managing environment variables for secure database credentials.
+
+### 💻 Hands-on / Practice
+
+I connected a Next.js Route Handler to a PostgreSQL database using Prisma and implemented a simple task management API. The endpoints supported creating, retrieving, updating, and deleting tasks while validating requests and returning appropriate HTTP status codes. I verified the functionality using Postman before consuming the API from a Next.js page.
+
+### 📖 Key Learnings
+
+- I found that Route Handlers integrate naturally with existing backend patterns, making it easy to reuse concepts from my Node.js experience.
+- Separating database logic from the route implementation made the code easier to maintain and extend.
+- Environment variables provide a secure way to manage database connection details without exposing sensitive information.
+- Combining Next.js Route Handlers with an ORM like Prisma results in a clean and type-safe backend workflow.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, I encountered a database connection issue because the environment variables were not loaded correctly after updating the `.env` file. Restarting the development server resolved the problem. I also ran into a Prisma client initialization error, which I fixed by reusing a single Prisma client instance instead of creating a new one for every request.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore Server Actions, learning how to perform data mutations and handle form submissions directly from Server Components without creating manual API endpoints.
