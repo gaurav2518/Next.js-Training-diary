@@ -535,3 +535,44 @@ Initially, I mixed utility classes with custom CSS unnecessarily, making the com
 ### 🎯 Next Steps
 
 Tomorrow I'll explore component libraries such as **shadcn/ui**, learning how to integrate reusable UI components, customize them, and build a consistent design system for Next.js applications.
+
+---
+
+
+## 📅 Day 14 – Jul 16
+
+**🏷️ Training Day:** Day 14 of 28
+**📚 Topic:** Component Libraries – Using shadcn/ui and Building a Reusable UI Kit
+
+---
+
+### 🎯 Objective
+
+Learn how to integrate a modern component library into a Next.js project, customize reusable UI components, and establish a consistent design system for scalable application development.
+
+### 📌 Topics Covered
+
+- Installing and configuring **shadcn/ui** in a Next.js application.
+- Understanding how shadcn/ui generates editable component source files.
+- Using reusable components such as Button, Card, Dialog, Input, and Badge.
+- Customizing components with Tailwind CSS and design tokens.
+- Organizing a reusable UI kit for consistent styling across the application.
+
+### 💻 Hands-on / Practice
+
+I set up **shadcn/ui** in a Next.js project and built a small admin dashboard using reusable components. The interface included navigation cards, a search bar, action buttons, modal dialogs, and form inputs. I customized component variants, adjusted spacing and colors with Tailwind CSS, and extracted commonly used UI elements into reusable components.
+
+### 📖 Key Learnings
+
+- I appreciated that shadcn/ui provides component source code instead of hiding implementation details behind a package, making customization much easier.
+- Building a reusable UI kit reduced duplicated code and helped maintain a consistent design across different pages.
+- Since the components are built with Tailwind CSS, extending or modifying their appearance felt straightforward.
+- Treating UI components as reusable building blocks makes future development faster and keeps the codebase easier to maintain.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, I expected shadcn/ui components to behave like a traditional component library, but I realized they are copied directly into the project for full ownership and customization. I also encountered styling inconsistencies after modifying component variants, which I resolved by updating the shared utility classes instead of overriding styles individually.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore global state management using the React Context API, understand how shared application state is managed, and identify scenarios where Context alone is no longer sufficient.
