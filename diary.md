@@ -658,3 +658,44 @@ Initially, my authentication cookie was not available after login because I hadn
 ### 🎯 Next Steps
 
 Tomorrow I'll implement authentication end-to-end by integrating **Auth.js (NextAuth.js)** or building a custom JWT-based authentication flow, including login, session management, protected routes, and user sign-out.
+
+---
+
+
+## 📅 Day 17 – Jul 20
+
+**🏷️ Training Day:** Day 17 of 28
+**📚 Topic:** Implementing Authentication End-to-End – Auth.js (NextAuth.js) or a Custom JWT Flow
+
+---
+
+### 🎯 Objective
+
+Implement a complete authentication flow in a Next.js application, from user login to protected routes, while understanding how Auth.js and custom JWT-based authentication fit into the App Router.
+
+### 📌 Topics Covered
+
+- Configuring authentication using Auth.js or a custom JWT implementation.
+- Implementing login, logout, and session management.
+- Protecting pages and Route Handlers based on authenticated user sessions.
+- Storing authentication data securely using HTTP-only cookies.
+- Accessing the authenticated user within Server Components and Route Handlers.
+
+### 💻 Hands-on / Practice
+
+I built a complete authentication flow for a small task management application. Users could register, log in, access a protected dashboard, and log out. I integrated Prisma for user persistence, securely hashed passwords before storage, validated credentials during login, and protected authenticated pages by verifying the active session before rendering user-specific content.
+
+### 📖 Key Learnings
+
+- I gained a much clearer understanding of how the different authentication pieces work together, from credential validation to session persistence and route protection.
+- Auth.js simplifies many authentication concerns, while a custom JWT implementation offers greater flexibility when application requirements become more specialized.
+- Authentication checks are most reliable when performed on the server rather than relying solely on client-side logic.
+- Separating authentication, authorization, and database access keeps the overall implementation easier to maintain and extend.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, authenticated users were not remaining logged in after refreshing the page because the session configuration was incomplete. After reviewing the session and cookie settings, persistence worked correctly. I also encountered issues protecting both pages and API endpoints consistently, which I resolved by centralizing the session validation logic into reusable server-side utilities.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore Next.js Middleware, learning how to protect routes, perform redirects based on authentication state, and understand common use cases for Edge Middleware.
