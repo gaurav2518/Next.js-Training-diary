@@ -864,3 +864,44 @@ Initially, some external images failed to load because their domains were not in
 ### 🎯 Next Steps
 
 Tomorrow I'll explore environment variables, project configuration, and scalable folder structures to organize a production-ready Next.js application while keeping sensitive configuration secure.
+
+---
+
+
+## 📅 Day 22 – Jul 25
+
+**🏷️ Training Day:** Day 22 of 28
+**📚 Topic:** Environment Variables, Configuration, and Project Structure for a Real App
+
+---
+
+### 🎯 Objective
+
+Learn how to organize a production-ready Next.js application by managing environment variables securely, configuring project settings, and structuring the codebase for scalability and maintainability.
+
+### 📌 Topics Covered
+
+- Managing environment variables using `.env.local` and environment-specific configuration files.
+- Understanding the difference between server-only variables and `NEXT_PUBLIC_` environment variables.
+- Configuring application behavior through `next.config.ts`.
+- Organizing folders for components, features, utilities, services, and shared libraries.
+- Separating configuration, business logic, and reusable modules to improve project maintainability.
+
+### 💻 Hands-on / Practice
+
+I refactored a small Next.js project into a feature-based structure by separating API utilities, database logic, reusable UI components, hooks, and shared helper functions. I moved sensitive values such as database URLs and API keys into environment variables, updated the application to consume them correctly, and configured project settings through `next.config.ts` where required.
+
+### 📖 Key Learnings
+
+- I understood the importance of keeping sensitive credentials on the server and exposing only values that are intentionally public using the `NEXT_PUBLIC_` prefix.
+- A well-organized project structure makes it easier to locate code, add new features, and collaborate with other developers.
+- Centralizing configuration reduces duplication and keeps environment-specific changes isolated from application logic.
+- Establishing consistent folder conventions early helps maintain code quality as the project grows.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, some environment variables were returning `undefined` because I forgot to restart the development server after modifying the `.env.local` file. I also accidentally exposed a server-only variable to the client before correcting it by removing the `NEXT_PUBLIC_` prefix and keeping the value accessible only on the server.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore testing React components in a Next.js application using **Jest** or **Vitest** together with **React Testing Library**, focusing on writing reliable unit tests for reusable UI components.
