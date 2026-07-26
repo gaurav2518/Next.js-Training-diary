@@ -740,3 +740,47 @@ Initially, my middleware executed on every request, including static assets, cau
 ### 🎯 Next Steps
 
 Tomorrow I'll explore error handling in Next.js, including route-level error boundaries with `error.tsx`, custom `not-found.tsx` pages, and effective `try/catch` patterns within Server Components.
+
+---
+
+
+## 📅 Day 19 – Jul 22
+
+**🏷️ Training Day:** Day 19 of 28
+**📚 Topic:** Error Handling – `error.tsx`, `not-found.tsx`, and `try/catch` Patterns in Server Components
+
+---
+
+### 🎯 Objective
+
+Learn how Next.js handles application errors gracefully using route-level error boundaries, custom 404 pages, and robust error handling patterns inside Server Components.
+
+### 📌 Topics Covered
+
+- Creating route-level error boundaries with `error.tsx`.
+- Displaying custom 404 pages using `not-found.tsx`.
+- Using `notFound()` to handle missing resources.
+- Implementing `try/catch` blocks for asynchronous operations in Server Components.
+- Providing meaningful fallback UI while logging server-side errors.
+
+### 💻 Hands-on / Practice
+
+I enhanced a small blog application by adding an `error.tsx` file for unexpected runtime errors and a custom `not-found.tsx` page for invalid blog post IDs. I also wrapped database queries in `try/catch` blocks and used `notFound()` whenever a requested post did not exist, ensuring users always received an appropriate response instead of a generic error.
+
+### 📖 Key Learnings
+
+- I learned that `error.tsx` acts as a route-level error boundary, allowing individual sections of the application to recover from runtime failures without affecting the entire app.
+- Using `notFound()` is much cleaner than manually checking for missing data and returning conditional UI.
+- Handling exceptions inside Server Components helps prevent unexpected crashes and allows more meaningful error responses.
+- Separating expected scenarios like missing data from unexpected runtime failures makes the application easier to maintain and debug.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, I expected `error.tsx` to catch every possible error, but I realized that expected conditions such as missing records should be handled with `notFound()` instead. I also forgot to expose the reset functionality in the error boundary, and after implementing the provided `reset()` callback, retrying failed renders worked as intended.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore Next.js caching and revalidation, learning how to control cached data using `revalidatePath`, `revalidateTag`, and the different caching options available with the built-in `fetch` API.
+
+
+---
