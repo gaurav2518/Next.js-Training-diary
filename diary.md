@@ -363,3 +363,43 @@ Initially, I encountered a database connection issue because the environment var
 ### 🎯 Next Steps
 
 Tomorrow I'll explore Server Actions, learning how to perform data mutations and handle form submissions directly from Server Components without creating manual API endpoints.
+
+---
+
+## 📅 Day 10 – Jul 11
+
+**🏷️ Training Day:** Day 10 of 28
+**📚 Topic:** Server Actions – Mutations Without Manual API Calls, Form Handling
+
+---
+
+### 🎯 Objective
+
+Understand how Server Actions simplify data mutations in the App Router by handling form submissions and server-side operations without creating separate REST API endpoints.
+
+### 📌 Topics Covered
+
+- Creating and using Server Actions with the `"use server"` directive.
+- Connecting HTML forms directly to Server Actions.
+- Performing create, update, and delete operations from Server Components.
+- Passing `FormData` to Server Actions for server-side processing.
+- Revalidating cached data after mutations using `revalidatePath`.
+
+### 💻 Hands-on / Practice
+
+I built a simple task management page where users could add and delete tasks through HTML forms connected directly to Server Actions. The submitted data was stored in a database using Prisma, and after each mutation I used `revalidatePath` to refresh the UI without manually fetching updated data.
+
+### 📖 Key Learnings
+
+- I found Server Actions to be a much cleaner approach for simple mutations because they eliminate the need to create separate API endpoints for every form submission.
+- Handling `FormData` directly inside a Server Action made the data flow easier to follow and reduced boilerplate code.
+- I understood how `revalidatePath` keeps server-rendered pages synchronized with the latest database changes after a mutation.
+- Coming from an Express background, I appreciated how Next.js combines frontend and backend logic while still keeping responsibilities well organized.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, I forgot to mark the action with the `"use server"` directive, causing the form submission to fail. After adding the directive, the action executed correctly on the server. I also noticed that updated data was not reflected immediately until I added `revalidatePath` after the database operation.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore client-side state management in React, focusing on `useState`, `useEffect`, lifting state between components, and composing reusable component hierarchies.
