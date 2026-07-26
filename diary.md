@@ -784,3 +784,42 @@ Tomorrow I'll explore Next.js caching and revalidation, learning how to control 
 
 
 ---
+
+
+## 📅 Day 20 – Jul 23
+
+**🏷️ Training Day:** Day 20 of 28
+**📚 Topic:** Caching & Revalidation – `revalidatePath`, `revalidateTag`, and `fetch` Cache Options
+
+---
+
+### 🎯 Objective
+
+Understand how Next.js caches server-rendered data and learn how to selectively invalidate cached content using revalidation APIs to keep applications both fast and up to date.
+
+### 📌 Topics Covered
+
+- Understanding the default caching behavior of the Next.js `fetch` API.
+- Configuring cache strategies using options such as `force-cache` and `no-store`.
+- Refreshing route data with `revalidatePath`.
+- Invalidating tagged cache entries using `revalidateTag`.
+- Choosing appropriate caching strategies for static, dynamic, and frequently updated data.
+
+### 💻 Hands-on / Practice
+
+I extended a simple blog application by fetching posts with different cache configurations to observe their behavior. After creating and updating posts through Server Actions, I used `revalidatePath` to refresh the blog listing and experimented with `revalidateTag` to invalidate only the affected cached content instead of refreshing the entire route.
+
+### 📖 Key Learnings
+
+- I learned that Next.js provides flexible caching controls without requiring manual cache management throughout the application.
+- Using `revalidatePath` is effective when an entire route needs to display updated data after a mutation.
+- I found `revalidateTag` more granular because it allows related cached resources to be refreshed without invalidating unrelated pages.
+- Selecting the correct `fetch` cache option is important for balancing application performance with data freshness.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, updated content did not appear after a database mutation because the cached route was still being served. Calling `revalidatePath` after the mutation resolved the issue immediately. I also experimented with different `fetch` cache options to understand why some requests returned cached responses while others always fetched fresh data.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore image and font optimization in Next.js, learning how to use `next/image`, `next/font`, and other built-in performance features to improve loading speed and user experience.
