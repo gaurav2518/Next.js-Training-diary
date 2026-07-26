@@ -699,3 +699,44 @@ Initially, authenticated users were not remaining logged in after refreshing the
 ### 🎯 Next Steps
 
 Tomorrow I'll explore Next.js Middleware, learning how to protect routes, perform redirects based on authentication state, and understand common use cases for Edge Middleware.
+
+---
+
+
+## 📅 Day 18 – Jul 21
+
+**🏷️ Training Day:** Day 18 of 28
+**📚 Topic:** Middleware – Route Protection, Redirects, and Edge Middleware Use Cases
+
+---
+
+### 🎯 Objective
+
+Understand how Next.js Middleware intercepts incoming requests, enables route protection, performs redirects, and handles request processing at the edge before a route is rendered.
+
+### 📌 Topics Covered
+
+- Creating and configuring `middleware.ts` in a Next.js application.
+- Protecting authenticated routes before page rendering.
+- Redirecting users based on authentication or application state.
+- Using the `matcher` configuration to control which routes execute middleware.
+- Understanding common Edge Middleware use cases such as authentication, localization, and request rewriting.
+
+### 💻 Hands-on / Practice
+
+I implemented middleware for a dashboard application where protected routes checked for a valid authentication cookie before allowing access. Unauthenticated users were redirected to the login page, while authenticated users attempting to visit the login page were redirected to the dashboard. I also configured route matchers so middleware executed only for protected sections of the application.
+
+### 📖 Key Learnings
+
+- I learned that Middleware executes before a request reaches a page or Route Handler, making it ideal for centralized authentication and routing logic.
+- Using route matchers helped avoid unnecessary middleware execution on public pages and static assets.
+- I found that handling redirects in middleware keeps page components cleaner by moving access control into a single location.
+- Edge Middleware provides fast request processing for scenarios like authentication, localization, and URL rewriting without duplicating logic across routes.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, my middleware executed on every request, including static assets, causing unnecessary processing. Configuring the `matcher` property restricted execution to only the required routes. I also encountered a redirect loop because authenticated and unauthenticated conditions overlapped, which I resolved by carefully ordering the redirect logic.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore error handling in Next.js, including route-level error boundaries with `error.tsx`, custom `not-found.tsx` pages, and effective `try/catch` patterns within Server Components.
