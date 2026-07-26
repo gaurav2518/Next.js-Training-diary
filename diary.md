@@ -823,3 +823,44 @@ Initially, updated content did not appear after a database mutation because the 
 ### 🎯 Next Steps
 
 Tomorrow I'll explore image and font optimization in Next.js, learning how to use `next/image`, `next/font`, and other built-in performance features to improve loading speed and user experience.
+
+---
+
+
+## 📅 Day 21 – Jul 24
+
+**🏷️ Training Day:** Day 21 of 28
+**📚 Topic:** Image & Font Optimization – `next/image`, `next/font`, and Performance Basics
+
+---
+
+### 🎯 Objective
+
+Learn how Next.js optimizes images and fonts using its built-in components and understand the performance benefits of reducing layout shifts, improving loading speed, and minimizing unnecessary network requests.
+
+### 📌 Topics Covered
+
+- Optimizing images with the `next/image` component.
+- Using `next/font` to self-host and optimize web fonts.
+- Preventing layout shifts by specifying image dimensions.
+- Lazy loading, responsive image sizing, and automatic image optimization.
+- Performance considerations such as Core Web Vitals and asset optimization.
+
+### 💻 Hands-on / Practice
+
+I optimized a landing page by replacing standard `<img>` tags with the `next/image` component and configured responsive image sizes for different screen widths. I also integrated a Google Font using `next/font`, applied it globally through the root layout, and compared the loading behavior before and after the optimizations using browser developer tools.
+
+### 📖 Key Learnings
+
+- I found that `next/image` provides responsive image optimization and lazy loading with very little configuration.
+- Using `next/font` removes the need for external font requests, improving loading performance and reducing layout shifts.
+- Defining image dimensions upfront helps create a more stable user experience by preventing unexpected layout movement.
+- Small optimizations to assets can significantly improve overall application performance and Core Web Vitals.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, some external images failed to load because their domains were not included in the Next.js image configuration. After adding the required domains to the project configuration, image optimization worked correctly. I also noticed minor layout shifts until I specified proper image dimensions and responsive sizing.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore environment variables, project configuration, and scalable folder structures to organize a production-ready Next.js application while keeping sensitive configuration secure.
