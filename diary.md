@@ -494,3 +494,44 @@ Initially, my validation errors were not appearing because I forgot to connect t
 ### 🎯 Next Steps
 
 Tomorrow I'll explore styling approaches in Next.js, comparing CSS Modules with Tailwind CSS and learning how to organize reusable, maintainable component styles.
+
+---
+
+
+## 📅 Day 13 – Jul 15
+
+**🏷️ Training Day:** Day 13 of 28
+**📚 Topic:** Styling in Next.js – CSS Modules, Tailwind CSS Setup and Usage
+
+---
+
+### 🎯 Objective
+
+Learn the primary styling approaches available in Next.js, understand when to use CSS Modules versus Tailwind CSS, and build responsive, maintainable user interfaces using utility-first styling.
+
+### 📌 Topics Covered
+
+- Configuring Tailwind CSS in a Next.js project.
+- Creating component-scoped styles with CSS Modules.
+- Utility-first styling principles and responsive design using Tailwind.
+- Combining global styles, CSS Modules, and Tailwind effectively.
+- Organizing reusable styling patterns for scalable applications.
+
+### 💻 Hands-on / Practice
+
+I redesigned a small dashboard page by styling navigation cards, buttons, and a profile section. I used Tailwind CSS for layout, spacing, responsiveness, and typography, while applying CSS Modules to a reusable card component that required encapsulated styles and hover animations. I also implemented responsive layouts using Tailwind's breakpoint utilities.
+
+### 📖 Key Learnings
+
+- I found Tailwind CSS significantly faster for building responsive layouts because most styling can be completed directly within the component markup.
+- CSS Modules remain useful when a component requires encapsulated styles or more complex selectors that would otherwise clutter the markup.
+- Combining both approaches provides flexibility without sacrificing maintainability or consistency.
+- Utility-first styling encourages reusable design patterns and minimizes context switching between JSX and separate stylesheet files.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, I mixed utility classes with custom CSS unnecessarily, making the components harder to maintain. After refactoring, I relied on Tailwind for layout and common styling while reserving CSS Modules only for component-specific effects. I also encountered missing styles after adding new utility classes, which was resolved by ensuring Tailwind scanned the correct project directories.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore component libraries such as **shadcn/ui**, learning how to integrate reusable UI components, customize them, and build a consistent design system for Next.js applications.
