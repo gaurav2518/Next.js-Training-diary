@@ -243,3 +243,43 @@ Initially, I found it difficult to distinguish between SSR and ISR because both 
 ### 🎯 Next Steps
 
 Tomorrow I'll explore static route generation with `generateStaticParams` and learn how to use the Metadata API to implement SEO-friendly page titles, descriptions, and other metadata.
+
+---
+
+## 📅 Day 7 – Jul 8
+
+**🏷️ Training Day:** Day 7 of 28
+**📚 Topic:** Static Params & `generateStaticParams`, Metadata API (SEO Basics)
+
+---
+
+### 🎯 Objective
+
+Learn how Next.js statically generates dynamic routes using `generateStaticParams` and understand how the Metadata API helps create SEO-friendly pages without relying on external libraries.
+
+### 📌 Topics Covered
+
+- Purpose of `generateStaticParams` for pre-rendering dynamic routes at build time.
+- Using `generateStaticParams` with dynamic route segments such as `[slug]` or `[id]`.
+- Static vs dynamic route generation and their impact on performance.
+- Configuring page metadata using the built-in Metadata API.
+- Adding page titles, descriptions, and Open Graph metadata for improved SEO.
+
+### 💻 Hands-on / Practice
+
+I built a simple blog application with dynamic post pages generated using `generateStaticParams`. Each post page included its own metadata, including a unique title and description, allowing me to verify that page-specific SEO information was automatically generated during rendering.
+
+### 📖 Key Learnings
+
+- I understood that `generateStaticParams` allows dynamic routes to be statically generated ahead of time, reducing request-time work and improving page performance.
+- I found the Metadata API much cleaner than manually managing document head elements, especially since metadata is colocated with each route.
+- I learned that metadata can be generated dynamically, making it easy to create SEO-friendly pages for content-driven applications.
+- Combining static generation with route-specific metadata provides both better performance and improved discoverability by search engines.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, I expected every dynamic route to be generated automatically, but I realized that only the parameters returned by `generateStaticParams` are pre-rendered during the build. I also mistakenly defined metadata in the wrong file before moving it to the appropriate route segment, after which the page title and description updated correctly.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore Route Handlers in Next.js by building REST API endpoints using the `app/api` directory and handling different HTTP methods within the App Router.
