@@ -576,3 +576,44 @@ Initially, I expected shadcn/ui components to behave like a traditional componen
 ### 🎯 Next Steps
 
 Tomorrow I'll explore global state management using the React Context API, understand how shared application state is managed, and identify scenarios where Context alone is no longer sufficient.
+
+---
+
+
+## 📅 Day 15 – Jul 17
+
+**🏷️ Training Day:** Day 15 of 28
+**📚 Topic:** Global State Management – Context API Basics, When Context Isn't Enough
+
+---
+
+### 🎯 Objective
+
+Understand how global state is managed in React applications using the Context API and learn when it is appropriate to use Context versus adopting a dedicated state management solution.
+
+### 📌 Topics Covered
+
+- Creating and consuming shared state with the React Context API.
+- Using providers to make application-wide data accessible.
+- Avoiding excessive prop drilling through Context.
+- Understanding Context re-render behavior and performance considerations.
+- Identifying scenarios where Context becomes difficult to scale and when dedicated state management libraries are more appropriate.
+
+### 💻 Hands-on / Practice
+
+I built a simple application with global theme and user preference management using the Context API. I created separate providers for theme and authentication state, wrapped the application with them, and consumed the shared state across multiple pages and reusable components without passing props through intermediate components.
+
+### 📖 Key Learnings
+
+- I found the Context API to be an effective solution for sharing application-wide data such as themes, authentication status, and user preferences.
+- Separating different concerns into individual context providers made the application easier to organize and maintain.
+- I realized that Context is intended for sharing state rather than replacing all local component state.
+- I now understand that as application complexity and update frequency increase, dedicated state management libraries may offer better scalability and performance.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, I placed unrelated values inside a single context, which caused unnecessary component re-renders whenever any part of the state changed. Splitting the data into smaller, focused contexts resolved the issue and improved maintainability. I also ensured that custom hooks were used to simplify context consumption throughout the application.
+
+### 🎯 Next Steps
+
+Tomorrow I'll explore authentication fundamentals in Next.js, comparing session-based and token-based authentication, and learn how cookies are used to securely manage user sessions.
