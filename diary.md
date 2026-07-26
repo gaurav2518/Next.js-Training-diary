@@ -617,3 +617,44 @@ Initially, I placed unrelated values inside a single context, which caused unnec
 ### 🎯 Next Steps
 
 Tomorrow I'll explore authentication fundamentals in Next.js, comparing session-based and token-based authentication, and learn how cookies are used to securely manage user sessions.
+
+---
+
+
+## 📅 Day 16 – Jul 18
+
+**🏷️ Training Day:** Day 16 of 28
+**📚 Topic:** Authentication Fundamentals – Session vs Token-Based Authentication, Cookies in Next.js
+
+---
+
+### 🎯 Objective
+
+Understand the authentication mechanisms commonly used in Next.js applications, compare session-based and token-based authentication, and learn how cookies are securely managed within the App Router.
+
+### 📌 Topics Covered
+
+- Differences between session-based and JWT/token-based authentication.
+- Using HTTP-only cookies for secure session management.
+- Reading and setting cookies with the Next.js `cookies()` API.
+- Authentication flow for login, protected routes, and logout.
+- Security considerations such as cookie flags (`HttpOnly`, `Secure`, and `SameSite`).
+
+### 💻 Hands-on / Practice
+
+I implemented a basic authentication flow using Route Handlers. A login endpoint validated user credentials and stored a signed session token in an HTTP-only cookie. I then created a protected dashboard page that checked the cookie before rendering content and added a logout action that cleared the session cookie.
+
+### 📖 Key Learnings
+
+- I understood that session-based and token-based authentication solve similar problems but involve different trade-offs in storage, scalability, and validation.
+- Using HTTP-only cookies improves security because authentication tokens remain inaccessible to client-side JavaScript.
+- The `cookies()` API integrates naturally with Server Components and Route Handlers, making authentication checks straightforward.
+- Authentication logic becomes easier to maintain when cookie handling, validation, and route protection are clearly separated.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, my authentication cookie was not available after login because I hadn't configured the cookie attributes correctly. After setting the appropriate options and verifying the response headers, the browser stored the cookie as expected. I also confirmed that protected routes validated the cookie on every request before rendering sensitive content.
+
+### 🎯 Next Steps
+
+Tomorrow I'll implement authentication end-to-end by integrating **Auth.js (NextAuth.js)** or building a custom JWT-based authentication flow, including login, session management, protected routes, and user sign-out.
