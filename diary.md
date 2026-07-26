@@ -283,3 +283,43 @@ Initially, I expected every dynamic route to be generated automatically, but I r
 ### 🎯 Next Steps
 
 Tomorrow I'll explore Route Handlers in Next.js by building REST API endpoints using the `app/api` directory and handling different HTTP methods within the App Router.
+
+---
+
+## 📅 Day 8 – Jul 9
+
+**🏷️ Training Day:** Day 8 of 28
+**📚 Topic:** API Routes / Route Handlers – Building REST Endpoints Inside Next.js
+
+---
+
+### 🎯 Objective
+
+Learn how to build RESTful API endpoints using Route Handlers in the Next.js App Router and understand how backend logic can be colocated within a Next.js application.
+
+### 📌 Topics Covered
+
+- Creating API endpoints using `route.ts` inside the `app/api` directory.
+- Handling different HTTP methods such as `GET`, `POST`, `PUT`, and `DELETE`.
+- Using `NextRequest` and `NextResponse` for processing requests and returning responses.
+- Extracting query parameters, route parameters, and request bodies.
+- Organizing Route Handlers for scalable API development within the App Router.
+
+### 💻 Hands-on / Practice
+
+I built a simple REST API for managing notes. The API supported listing notes with `GET`, creating new notes with `POST`, updating existing notes with `PUT`, and deleting notes with `DELETE`. I tested each endpoint using Postman and verified the responses by consuming the API from a simple Next.js page.
+
+### 📖 Key Learnings
+
+- I found Route Handlers intuitive because they follow standard REST principles while fitting naturally into the App Router's file-based structure.
+- Using `NextRequest` and `NextResponse` made request parsing and response formatting straightforward without additional libraries.
+- Since I already have backend experience, it was easy to relate Route Handlers to Express routes while appreciating the tighter integration within Next.js.
+- Keeping frontend pages and lightweight backend endpoints in the same project can simplify development for full-stack applications.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, I attempted to create API files using the older `pages/api` convention before realizing that the App Router requires `route.ts` inside the `app/api` directory. I also forgot to return a `NextResponse` from one handler, which caused the request to fail until I corrected the response format.
+
+### 🎯 Next Steps
+
+Tomorrow I'll connect Route Handlers to a database, learning how to access backend data sources, perform database operations, and expose the results through Next.js API endpoints.
