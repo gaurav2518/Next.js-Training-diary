@@ -1,4 +1,3 @@
-
 # 🚀 Next.js Self-Training Diary
 
 ### One-Month Learning Log
@@ -50,7 +49,6 @@ Tomorrow I'll explore the App Router in more detail, focusing on layouts, nested
 
 ---
 
-
 ### 🎯 Objective
 
 Explore how the App Router organizes an application using the file system, understand the roles of `page.tsx` and `layout.tsx`, and learn how nested routes are structured in Next.js.
@@ -83,7 +81,6 @@ At first, I placed a page in an incorrect folder, which resulted in an unexpecte
 Tomorrow I'll explore navigation in the App Router, including the `Link` component, programmatic navigation with `useRouter`, tracking the current route using `usePathname`, and creating dynamic routes with `[id]`.
 
 ---
-
 
 ## 📅 Day 3 – Jul 3
 
@@ -124,7 +121,6 @@ Initially, I attempted to use `useRouter` inside a Server Component, which resul
 Tomorrow I'll explore React Server Components and Client Components, focusing on the `"use client"` boundary, rendering behavior, and choosing the appropriate component type for different scenarios.
 
 ---
-
 
 ## 📅 Day 4 – Jul 4
 
@@ -168,14 +164,12 @@ Tomorrow I'll explore data fetching in Server Components, including asynchronous
 
 ---
 
-
 ## 📅 Day 5 – Jul 6
 
 **🏷️ Training Day:** Day 5 of 28
 **📚 Topic:** Data Fetching Basics – `fetch` in Server Components, Async Components, and Loading UI
 
 ---
-
 
 ### 🎯 Objective
 
@@ -209,7 +203,6 @@ Initially, I expected `fetch` to behave exactly like it does in a browser enviro
 Tomorrow I'll explore Next.js rendering strategies, comparing Server-Side Rendering (SSR), Static Site Generation (SSG), and Incremental Static Regeneration (ISR), and understand when each approach is the most appropriate.
 
 ---
-
 
 ## 📅 Day 6 – Jul 7
 
@@ -251,7 +244,6 @@ Tomorrow I'll explore static route generation with `generateStaticParams` and le
 
 ---
 
-
 ## 📅 Day 7 – Jul 8
 
 **🏷️ Training Day:** Day 7 of 28
@@ -291,7 +283,6 @@ Initially, I expected every dynamic route to be generated automatically, but I r
 Tomorrow I'll explore Route Handlers in Next.js by building REST API endpoints using the `app/api` directory and handling different HTTP methods within the App Router.
 
 ---
-
 
 ## 📅 Day 8 – Jul 9
 
@@ -333,7 +324,6 @@ Tomorrow I'll connect Route Handlers to a database, learning how to access backe
 
 ---
 
-
 ## 📅 Day 9 – Jul 10
 
 **🏷️ Training Day:** Day 9 of 28
@@ -373,7 +363,6 @@ Initially, I encountered a database connection issue because the environment var
 Tomorrow I'll explore Server Actions, learning how to perform data mutations and handle form submissions directly from Server Components without creating manual API endpoints.
 
 ---
-
 
 ## 📅 Day 10 – Jul 11
 
@@ -415,7 +404,6 @@ Tomorrow I'll explore client-side state management in React, focusing on `useSta
 
 ---
 
-
 ## 📅 Day 11 – Jul 13
 
 **🏷️ Training Day:** Day 11 of 28
@@ -455,7 +443,6 @@ Initially, I encountered unnecessary re-renders because I updated state inside a
 Tomorrow I'll explore form handling in greater depth, including controlled inputs, client-side validation, and building robust forms using **React Hook Form** together with **Zod**.
 
 ---
-
 
 ## 📅 Day 12 – Jul 14
 
@@ -497,7 +484,6 @@ Tomorrow I'll explore styling approaches in Next.js, comparing CSS Modules with 
 
 ---
 
-
 ## 📅 Day 13 – Jul 15
 
 **🏷️ Training Day:** Day 13 of 28
@@ -537,7 +523,6 @@ Initially, I mixed utility classes with custom CSS unnecessarily, making the com
 Tomorrow I'll explore component libraries such as **shadcn/ui**, learning how to integrate reusable UI components, customize them, and build a consistent design system for Next.js applications.
 
 ---
-
 
 ## 📅 Day 14 – Jul 16
 
@@ -579,7 +564,6 @@ Tomorrow I'll explore global state management using the React Context API, under
 
 ---
 
-
 ## 📅 Day 15 – Jul 17
 
 **🏷️ Training Day:** Day 15 of 28
@@ -619,7 +603,6 @@ Initially, I placed unrelated values inside a single context, which caused unnec
 Tomorrow I'll explore authentication fundamentals in Next.js, comparing session-based and token-based authentication, and learn how cookies are used to securely manage user sessions.
 
 ---
-
 
 ## 📅 Day 16 – Jul 18
 
@@ -661,7 +644,6 @@ Tomorrow I'll implement authentication end-to-end by integrating **Auth.js (Next
 
 ---
 
-
 ## 📅 Day 17 – Jul 20
 
 **🏷️ Training Day:** Day 17 of 28
@@ -701,7 +683,6 @@ Initially, authenticated users were not remaining logged in after refreshing the
 Tomorrow I'll explore Next.js Middleware, learning how to protect routes, perform redirects based on authentication state, and understand common use cases for Edge Middleware.
 
 ---
-
 
 ## 📅 Day 18 – Jul 21
 
@@ -743,7 +724,6 @@ Tomorrow I'll explore error handling in Next.js, including route-level error bou
 
 ---
 
-
 ## 📅 Day 19 – Jul 22
 
 **🏷️ Training Day:** Day 19 of 28
@@ -782,9 +762,7 @@ Initially, I expected `error.tsx` to catch every possible error, but I realized 
 
 Tomorrow I'll explore Next.js caching and revalidation, learning how to control cached data using `revalidatePath`, `revalidateTag`, and the different caching options available with the built-in `fetch` API.
 
-
 ---
-
 
 ## 📅 Day 20 – Jul 23
 
@@ -826,7 +804,6 @@ Tomorrow I'll explore image and font optimization in Next.js, learning how to us
 
 ---
 
-
 ## 📅 Day 21 – Jul 24
 
 **🏷️ Training Day:** Day 21 of 28
@@ -867,7 +844,6 @@ Tomorrow I'll explore environment variables, project configuration, and scalable
 
 ---
 
-
 ## 📅 Day 22 – Jul 25
 
 **🏷️ Training Day:** Day 22 of 28
@@ -905,3 +881,47 @@ Initially, some environment variables were returning `undefined` because I forgo
 ### 🎯 Next Steps
 
 Tomorrow I'll explore testing React components in a Next.js application using **Jest** or **Vitest** together with **React Testing Library**, focusing on writing reliable unit tests for reusable UI components.
+
+---
+
+
+
+## 📅 Day 23 – Jul 27
+
+**🏷️ Training Day:** Day 23 of 28
+**📚 Topic:** Testing – Unit Testing Components with Jest/Vitest and React Testing Library
+
+---
+
+### 🎯 Objective
+
+Learn how to write reliable unit tests for React components in a Next.js application using Jest or Vitest together with React Testing Library, ensuring UI behavior remains consistent as the application evolves.
+
+### 📌 Topics Covered
+
+- Setting up Jest/Vitest for a Next.js project.
+- Writing component tests with React Testing Library.
+- Querying elements using accessible selectors and user-focused assertions.
+- Mocking functions, API calls, and Next.js-specific modules where required.
+- Testing component rendering, user interactions, and conditional UI states.
+
+### 💻 Hands-on / Practice
+
+I configured Vitest with React Testing Library and wrote unit tests for reusable UI components, including a Button, Search Input, and Login Form. The tests verified rendering, user interactions, form validation messages, disabled button states, and callback execution. I also mocked a utility function and ensured the components behaved correctly under different input scenarios.
+
+### 📖 Key Learnings
+
+- I realized that effective component tests should focus on user-visible behavior rather than internal implementation details.
+- React Testing Library encourages writing tests that closely resemble how users interact with the application, making them more maintainable.
+- Mocking external dependencies keeps unit tests isolated and prevents unrelated services from affecting test results.
+- Having automated tests provides confidence when refactoring reusable components or introducing new features.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, some tests failed because browser-specific APIs were unavailable in the test environment. Configuring the `jsdom` environment resolved the issue. I also encountered unreliable assertions when selecting elements by CSS classes, so I switched to accessible queries such as roles and labels, resulting in more stable and readable tests.
+
+### 🎯 Next Steps
+
+Tomorrow I'll take a deeper look at SEO in Next.js, covering the Metadata API, Open Graph tags, `sitemap.xml`, `robots.txt`, and structured data to improve search engine visibility and content sharing.
+
+---
