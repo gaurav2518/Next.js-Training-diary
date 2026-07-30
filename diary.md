@@ -1007,3 +1007,45 @@ Initially, I attempted to dynamically import a component that relied on browser-
 ### 🎯 Next Steps
 
 Tomorrow I'll deploy a production-ready Next.js application to **Vercel**, configure environment variables, and explore build-time versus runtime considerations to ensure reliable deployments across different environments.
+
+---
+
+
+
+## 📅 Day 26 – Jul 30
+
+**🏷️ Training Day:** Day 26 of 28
+**📚 Topic:** Deployment – Deploying to Vercel, Environment Configs, and Build/Runtime Considerations
+
+---
+
+### 🎯 Objective
+
+Understand the deployment workflow for a production Next.js application, configure environment variables correctly, and learn how build-time and runtime behavior affect deployment decisions.
+
+### 📌 Topics Covered
+
+- Deploying a Next.js application to Vercel through GitHub integration.
+- Configuring environment variables for development, preview, and production environments.
+- Understanding build-time versus runtime execution in the App Router.
+- Identifying deployment considerations for Server Components, Route Handlers, and database connections.
+- Monitoring build logs and debugging deployment failures.
+
+### 💻 Hands-on / Practice
+
+I deployed one of my Next.js projects to Vercel and configured all required environment variables for the production environment. After deployment, I verified database connectivity, tested Route Handlers, checked server-side rendering behavior, and ensured authentication flows worked correctly in the deployed application. I also reviewed build logs to understand what happens during the production build process.
+
+### 📖 Key Learnings
+
+- I realized that a project working locally does not guarantee a successful production deployment because environment variables, build behavior, and infrastructure can differ significantly.
+- Understanding whether code executes at build time or runtime is important when working with databases, external APIs, and server-side logic.
+- Keeping environment variables organized and consistent across environments prevents many deployment-related issues.
+- Vercel simplifies the deployment process, but debugging build logs and understanding the deployment pipeline is still essential.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, the deployed application failed because one required environment variable was missing in the Vercel project settings. After adding the variable and triggering a redeployment, the issue was resolved. I also encountered a production-only error caused by assuming local file paths would behave the same in the serverless environment, which I fixed by using environment-based configuration instead.
+
+### 🎯 Next Steps
+
+Tomorrow I'll begin building a small full-stack capstone feature for the **MetaCourt** project, applying routing, authentication, database access, Server Actions, and deployment concepts together in a realistic end-to-end workflow.
