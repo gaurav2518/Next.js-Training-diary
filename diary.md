@@ -965,3 +965,45 @@ Initially, some metadata changes were not reflected because the browser cached p
 ### 🎯 Next Steps
 
 Tomorrow I'll focus on performance optimization in Next.js by analyzing bundle size, implementing code splitting, and using `next/dynamic` to load components only when they are needed.
+
+---
+
+
+
+## 📅 Day 25 – Jul 29
+
+**🏷️ Training Day:** Day 25 of 28
+**📚 Topic:** Performance Optimization – Bundle Analysis, Code Splitting, and `next/dynamic`
+
+---
+
+### 🎯 Objective
+
+Learn how to optimize the performance of a Next.js application by reducing JavaScript bundle size, loading components only when required, and identifying opportunities to improve page load times.
+
+### 📌 Topics Covered
+
+- Analyzing application bundle size using bundle analysis tools.
+- Understanding automatic and manual code splitting in Next.js.
+- Lazy loading components with `next/dynamic`.
+- Deferring heavy client-side components until they are needed.
+- Measuring the impact of optimizations on page performance and loading behavior.
+
+### 💻 Hands-on / Practice
+
+I optimized a dashboard application by identifying a large charting library that was unnecessarily included in the initial bundle. I loaded the chart component using `next/dynamic`, displayed a loading fallback while it was fetched, and compared the application's bundle size and page load behavior before and after the optimization using the bundle analyzer.
+
+### 📖 Key Learnings
+
+- I learned that Next.js automatically performs route-level code splitting, but large client-side dependencies can still negatively impact performance if imported indiscriminately.
+- Using `next/dynamic` allows expensive components to load only when users actually need them, improving the initial page experience.
+- Bundle analysis helped me identify which dependencies contributed the most to the final build size.
+- Performance optimization is often about removing unnecessary work rather than simply making existing code execute faster.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, I attempted to dynamically import a component that relied on browser-only APIs, which caused hydration issues during rendering. Configuring the component appropriately for client-side execution resolved the problem. I also verified that lazy loading only benefited components that were not immediately required on the first render.
+
+### 🎯 Next Steps
+
+Tomorrow I'll deploy a production-ready Next.js application to **Vercel**, configure environment variables, and explore build-time versus runtime considerations to ensure reliable deployments across different environments.
