@@ -925,3 +925,43 @@ Initially, some tests failed because browser-specific APIs were unavailable in t
 Tomorrow I'll take a deeper look at SEO in Next.js, covering the Metadata API, Open Graph tags, `sitemap.xml`, `robots.txt`, and structured data to improve search engine visibility and content sharing.
 
 ---
+
+
+
+## 📅 Day 24 – Jul 28
+
+**🏷️ Training Day:** Day 24 of 28
+**📚 Topic:** SEO & Metadata Deep Dive – Open Graph, `sitemap.xml`, `robots.txt`, and Structured Data
+
+---
+
+### 🎯 Objective
+
+Understand how Next.js improves search engine visibility and social media sharing by configuring metadata, generating sitemaps, controlling crawler behavior, and adding structured data.
+
+### 📌 Topics Covered
+
+- Configuring advanced metadata using the Next.js Metadata API.
+- Adding Open Graph and Twitter Card metadata for social sharing.
+- Generating `sitemap.xml` and `robots.txt` using App Router conventions.
+- Implementing structured data with JSON-LD for search engines.
+- Verifying SEO improvements using browser tools and metadata inspection.
+
+### 💻 Hands-on / Practice
+
+I enhanced a blog application by adding page-specific Open Graph metadata, generating a dynamic `sitemap.xml`, configuring a custom `robots.txt`, and embedding JSON-LD structured data for blog posts. I also verified that metadata changed correctly for different routes and confirmed the generated files were accessible through the browser.
+
+### 📖 Key Learnings
+
+- I learned that SEO in Next.js extends beyond page titles and descriptions by including metadata for search engines, social platforms, and structured content.
+- Open Graph metadata significantly improves how pages appear when shared on social media platforms.
+- Automatically generating `sitemap.xml` and `robots.txt` simplifies search engine indexing while keeping crawler behavior configurable.
+- Structured data provides additional context to search engines, increasing the likelihood of enhanced search result presentations.
+
+### ⚡ Challenges Faced / Resolution
+
+Initially, some metadata changes were not reflected because the browser cached previous values. Performing a hard refresh and verifying the generated metadata resolved the confusion. I also made a mistake in the JSON-LD structure, which I corrected by following the Schema.org format and validating the generated markup before continuing.
+
+### 🎯 Next Steps
+
+Tomorrow I'll focus on performance optimization in Next.js by analyzing bundle size, implementing code splitting, and using `next/dynamic` to load components only when they are needed.
